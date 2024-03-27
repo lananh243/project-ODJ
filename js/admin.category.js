@@ -70,7 +70,7 @@ saveButton.addEventListener('click', function() {
         inputName.value = '';
     } else {
         // Hiển thị thông báo lỗi nếu tên danh mục không được nhập
-        alert("Vui lòng nhập tên danh mục !");
+        alert("Vui lòng nhập tên danh mục!");
     }
 });
 function loadCategoryTable() {
