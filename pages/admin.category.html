@@ -61,7 +61,9 @@
               <a href="./admin.home.html"><b>Quay Lại</b></a>
             </button>
             <div class="addCategory">
-              <button class="btn" onclick="showForm()">Thêm danh mục sản phẩm</button>
+              <button class="btn" onclick="showForm()">
+                Thêm danh mục sản phẩm
+              </button>
             </div>
             <table id="categoryTable">
               <thead>
@@ -70,20 +72,25 @@
                   <th>ID</th>
                   <th>Tên danh mục</th>
                   <!-- <th>Ngày sinh</th> -->
-                 <th colspan="2">action</th>
+                  <th colspan="2">action</th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody id="tbody"></tbody>
             </table>
-                <div class="formAdd">
-                    <span class="closeButton" onclick="closeForm()">&times;</span>
-                    <h3 style="white-space: nowrap;margin-top: 30px;">Thêm danh mục</h3>
-                    <br><br>
-                    <div class="input">
-                        <div class="pro">
-                            <p class="text">Tên</p>
-                            <input type="text" class="inp"> </div>
-                        <!-- <div class="pro">
+            <div class="formAdd">
+              <span id="overlay" class="closeButton" onclick="closeForm()"
+                >&times;</span
+              >
+              <h3 style="white-space: nowrap; margin-top: 30px">
+                Thêm danh mục
+              </h3>
+              <br /><br />
+              <div class="input">
+                <div class="pro">
+                  <p class="text">Tên</p>
+                  <input type="text" class="inp" />
+                </div>
+                <!-- <div class="pro">
                             <p class="text">Image</p> 
                             <input type="file" class="inp"></div>
                         <div class="pro">
@@ -93,7 +100,7 @@
                             <p class="text">Số lượng </p>
                             <input type="text" class="inp"></div>
                         </div> -->
-                        <!-- <div class="pro">
+                <!-- <div class="pro">
                             <p class="text">Danh mục</p>
                             <select name="" id="" class="inp">
                                 <option value="">Trái cây</option>
@@ -101,19 +108,14 @@
                                 <option value="">Trái cây nhập khẩu</option>
                             </select>
                         </div> -->
-                        <br><br>
-                        <div class="pro">
-                            <p class="text"></p>
-                          <button class="butn">Lưu lại</button>  
-                        </div>
-                        
-                        
-                    </div>
-                    
-
+                <br /><br />
+                <div class="pro">
+                  <p class="text"></p>
+                  <button class="butn">Lưu lại</button>
                 </div>
+              </div>
+            </div>
           </div>
-          
         </div>
 
         <script src="../js/admin.category.js"></script>

@@ -11,23 +11,6 @@
     <link rel="stylesheet" href="../styles/admin.product.css" />
   </head>
   <body>
-    <!-- <div class="products">
-        <img class="picture" src="https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-ls26twfutvvdf8" alt="">
-        <div class="internet">
-            <div class="socialMedia">
-                <span>Chia sẻ : </span>
-                <i class="fa-brands fa-facebook-messenger"></i>
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-twitter"></i>
-                <i class="fa-brands fa-paypal"></i> 
-            </div>
-            <div>
-                <i style="color: red;" class="fa-solid fa-heart"></i>
-                <span>Đã thích (8,3k)</span>
-            </div>
-        </div>
-        <h1></h1>
-    </div> -->
     <div class="include">
       <div class="manager">
         <img
@@ -90,12 +73,12 @@
                 <option value="">Có trong giỏ</option>
                 <option value="">Chọn sản phẩm</option>
             </select>
-            <button class="run">
+            <button class="run" onclick="showForm()">
                 <span class="material-symbols-outlined"> add </span>
                 Thêm mới
             </button>
         </div>
-        <table>
+        <table id="productTable" border="1">
             <thead>
                 <tr>
                     <th>STT</th>
@@ -103,24 +86,62 @@
                     <th>Ảnh</th>
                     <th>Giá</th>
                     <th>Còn hàng</th>
+                    <th>Trạng thái</th>
                     <th>Tác vụ</th>
                 </tr>
             </thead>
             <tbody id="tbody">
-                <tr>
+                <!-- <tr>
                     <td>1</td>
                     <td>Trang phục nữ</td>
-                    <td><img src="https://img.lazcdn.com/g/p/ffae1e685adfc87fc524a6648410af2c.jpg_720x720q80.jpg" alt="" width="150px"></td>
+                    <td><img src="https://img.lazcdn.com/g/p/ffae1e685adfc87fc524a6648410af2c.jpg_720x720q80.jpg" alt="" style="width: 200px;height: 200px;"></td>
                     <td>123.000</td>
                     <td>1</td>
                     <td>
                         <span class="material-symbols-outlined"> open_in_new </span>
                         <span class="material-symbols-outlined"> close </span>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
         </table>
       </div>
+      <div class="formAdd">
+        <span class="closeButton" onclick="closeForm()">&times;</span>
+        <h3 style="white-space: nowrap;margin-top: 30px;">Thêm sản phẩm</h3>
+        <br><br>
+        <div class="input">
+            <div class="pro">
+                <p class="text">Tên</p>
+                <input type="text" class="inp"> </div>
+            <div class="pro">
+                <p class="text">Image</p> 
+                <input type="file" ></div>
+            <div class="pro">
+                <p class="text">Giá</p> 
+                <input type="text" class="inp"></div>
+            <div class="pro">
+                <p class="text">Số lượng </p>
+                <input type="text" class="inp"></div>
+            </div>
+            <div class="pro">
+                <p class="text">Danh mục</p>
+                <select name="" id="" class="inp">
+                    <option value="">Trái cây</option>
+                    <option value="">Lẵng quả</option>
+                    <option value="">Trái cây nhập khẩu</option>
+                </select>
+            </div>
+            <br><br>
+            <!-- <div class="pro">
+                <p class="text"></p>
+              <button class="butn">Lưu lại</button>  
+            </div> -->
+            
+            
+        </div>
+        
+
+    </div>
     </div>
   </body>
   <script src="../js/admin.product.js"></script>

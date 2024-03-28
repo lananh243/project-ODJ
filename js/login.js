@@ -3,6 +3,14 @@ function signIn(e) {
     e.preventDefault();
     let inpEmail = document.getElementById("email").value;
     let inpPassword = document.getElementById("password").value;
+    let role="admin"
+    if(inpEmail=="admin" &&inpPassword=="12345" && role=="admin"){
+        // lưu cờ trên local
+
+        // điều hướng sang trang admin
+        window.location.href="./admin.home.html"
+        return;
+    }
     let check = false;
     let account = {};
     if (inpEmail == "") {

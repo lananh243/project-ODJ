@@ -32,14 +32,15 @@ function renderUser() {
   
     for (let i = 0; i < users.length; i++) {
       // Chuyển đổi trạng thái "Mở Khóa" sang "Khóa"
-      const statusText = users[i].status === "true" ?"Mở Khóa"  : "Bị Khóa";
+      const statusText = users[i].status === "true" ?"Mở"  : "Khóa";
       const statusClass = users[i].status === "true" ?"online" : "offline";
   
       htmlString += `
           <tr>
               <td>${i + 1}</td>
               <td>${users[i].id}</td>
-              <td>${users[i].lastName + "&nbsp" + users[i].firstName}</td>
+              <td>${users[i].userName}</td>
+              <td>${users[i].phone}</td>
               <td>${users[i].emailAddress}</td>
               <td>
                   <button class="${statusClass}" onclick="toggleStatus(${i}, ${users[i].id})">${statusText}</button>

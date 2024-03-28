@@ -7,6 +7,7 @@
 //     image:
 //       "https://thuyanhfruits.com/wp-content/uploads/2020/10/120949477_1432966360234939_4789803050789831247_n.jpg",
 //     stock: "1,3k",
+//     active: true,
 //   },
 //   {
 //     id: 2,
@@ -16,6 +17,7 @@
 //     image:
 //       "https://thuyanhfruits.com/wp-content/uploads/2020/11/122637738_1448950891969819_1317449283296797618_o.jpg",
 //     stock: "2,0k",
+//     active: true,
 //   },
 
 //   {
@@ -26,6 +28,7 @@
 //     image:
 //       "https://quangon.vn/resources/2021/01/22/nho-xanh-sua-han-quoc-10.jpg",
 //     stock: "3,6k",
+//     active: true,
 //   },
 //   {
 //     id: 4,
@@ -35,6 +38,8 @@
 //     image:
 //       "https://thuyanhfruits.com/wp-content/uploads/2020/11/roi-do-1-768x768.jpg",
 //     stock: "890",
+
+//     active: true,
 //   },
 //   {
 //     id: 5,
@@ -44,6 +49,7 @@
 //     image:
 //       "https://thuyanhfruits.com/wp-content/uploads/2020/11/80113048_1180556735475904_3787615681340506112_o.jpg",
 //     stock: "7,9k",
+//     active: true,
 //   },
 //   {
 //     id: 6,
@@ -52,6 +58,8 @@
 //     sold: "2,1k",
 //     image: "https://thuyanhfruits.com/wp-content/uploads/2023/09/Hop-qua-1.png",
 //     stock: "200",
+
+//     active: true,
 //   },
 //   {
 //     id: 7,
@@ -61,6 +69,7 @@
 //     image:
 //       "https://thuyanhfruits.com/wp-content/uploads/2020/11/online-768x768.png",
 //     stock: "3,4k",
+//     active: true,
 //   },
 //   {
 //     id: 8,
@@ -70,6 +79,8 @@
 //     image:
 //       "https://thuyanhfruits.com/wp-content/uploads/2020/11/dia-qua-bo-san-14-768x768.png",
 //     stock: "460",
+
+//     active: true,
 //   },
 //   {
 //     id: 9,
@@ -78,6 +89,7 @@
 //     sold: "12,2k",
 //     image: "https://vinfruits.com/wp-content/uploads/2017/02/5-11.png",
 //     stock: "330",
+//     active: true,
 //   },
 //   {
 //     id: 10,
@@ -87,6 +99,7 @@
 //     image:
 //       "https://vinfruits.com/wp-content/uploads/2016/12/176334586_2780710228925832_1031098562861576247_n.jpg",
 //     stock: "6,3k",
+//     active: true,
 //   },
 //   {
 //     id: 11,
@@ -95,6 +108,7 @@
 //     sold: "28,2k",
 //     image: "https://vinfruits.com/wp-content/uploads/2023/01/1.png",
 //     stock: "1,6k",
+//     active: true,
 //   },
 //   {
 //     id: 12,
@@ -103,6 +117,8 @@
 //     sold: "3,3k",
 //     image: "https://vinfruits.com/wp-content/uploads/2022/12/3.jpg",
 //     stock: "780",
+
+//     active: true,
 //   },
 //   {
 //     id: 13,
@@ -111,6 +127,7 @@
 //     sold: "7,2k",
 //     image: "https://ngocchaufruits.com/upload/images/gio-hoa-qua-121.jpg",
 //     stock: "1,2k",
+//     active: true,
 //   },
 //   {
 //     id: 14,
@@ -120,6 +137,7 @@
 //     image:
 //       "https://anhchaufruits.vn/wp-content/uploads/2022/11/AC143.1850K.jpg",
 //     stock: "278",
+//     active: true,
 //   },
 //   {
 //     id: 15,
@@ -129,6 +147,7 @@
 //     image:
 //       "https://hoatuoi360.vn/uploads/file/gio-trai-cay-xu-huong-tang-qua-duoc-ua-chuong-hoatuoi360.jpg",
 //     stock: "1,2k",
+//     active: true,
 //   },
 //   {
 //     id: 16,
@@ -137,6 +156,7 @@
 //     sold: "3,1k",
 //     image: "https://gioquatetyen.com/wp-content/uploads/2023/03/6.png",
 //     stock: "1,9k",
+//     active: true,
 //   },
 // ];
 
@@ -147,6 +167,15 @@ let products = JSON.parse(localStorage.getItem("products"));
 // console.log("111111", products);
 //  function render product
 function renderProduct() {
+  let rawProducts = JSON.parse(localStorage.getItem("products"));
+
+  const products = [];
+  for (let i = 0; i < rawProducts.length; i++) {
+    if (rawProducts[i].active) {
+      products.push(rawProducts[i]);
+    }
+  }
+
   let element = "";
   for (let i = 0; i < products.length; i++) {
     element += `
